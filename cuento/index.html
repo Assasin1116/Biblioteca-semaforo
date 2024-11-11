@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div id="Biblioteca" class="session">
+        <h1>Estás en la Biblioteca</h1>
+        <h3>revisas el formulario para verificar si esta disponible</h3>
+        <h3>si esta disponible lo agarra llena el formulario y lo pone en 0 </h3>
+        <img src="img/biblio.png" width="300">
+        <button onclick="mostrarSesion('libro')">siguiente</button>
+    </div>
+
+    <div id="libro" class="session" >
+        <h1>se queda con el libro</h1>      
+        <img src="img/libros.png" width="300">
+        <button onclick="mostrarSesion('llenar formulario')">siguiente</button>
+    </div>
+
+    <div id="llenar formulario" class="session">
+        <h1>si llega alguien mas</h1>
+        <h3>llena formulario y queda atento a la respuesta</h3>
+        <img src="img/formulario.png" width="300">
+        <button onclick="mostrarSesion('respuesta')">siguiente</button>
+    </div>
+
+    <div id="respuesta" class="session">
+        <h1>cuando el que tiene el libro termina de utilizarlo pregunta hay alguien la lista si la respuesta es si busca el numero y lo llama para avisarle</h1>
+        <h3>si la respuestaes no coloca el numero 0 en el formulario para que vean q esta disponible el que llegue</h3>
+        <img src="img/llamar.png" width="300">
+        <button onclick="mostrarSesion('termino')">terminar</button>
+    </div>
+
+    <div id="termino" class="session">
+        <h1>terminaste el proceso</h1>
+        <h3>¿quiere empezar de nuevo el proceso?</h3>
+        <button onclick="mostrarSesion('Biblioteca')">Si</button>
+        <button class="url-button" onclick="redirectToURL()">No</button>
+    </div>
+   
+</body>
+</html>
